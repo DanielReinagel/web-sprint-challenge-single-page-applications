@@ -56,8 +56,7 @@ function PizzaForm(props){
             <label>Name: <input type='text' id='name-input' name='name' onChange={onChange} value={formData.name}/></label>
             {formErrors.name && <ErrorMessage>{formErrors.name}</ErrorMessage>}
             <br/>
-            <label>Pizza Size:
-                <select id='size-dropdown' name='size' onChange={onChange} value={formData.size}>
+            <label>Pizza Size: <select id='size-dropdown' name='size' onChange={onChange} value={formData.size}>
                     <option value=''>--Select A Size--</option>
                     <option>Large</option>
                     <option>Medium</option>
