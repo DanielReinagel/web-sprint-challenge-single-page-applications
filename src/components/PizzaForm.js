@@ -36,7 +36,7 @@ function PizzaForm(props){
     const onSubmit = (event)=> {
         event.preventDefault();
         axios.post('https://reqres.in/api/orders', {...formData, name:formData.name.trim(), special:formData.special.trim()})
-            .then(() => setFormData(initialFormData))
+            .then(resp => {console.log(resp.data); setFormData(initialFormData);})
             .catch(err => console.error(err));
     };
 
