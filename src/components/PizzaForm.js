@@ -2,11 +2,11 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import * as yup from "yup";
 import schema from "../schema/PizzaFormSchema";
-/*import styled from "styled-components";
+import styled from "styled-components";
 
 const ErrorMessage = styled.p`
     color: red;
-`;*/
+`;
 
 const initialFormData = {
     name: '',
@@ -54,7 +54,7 @@ function PizzaForm(props){
     return (
         <form id='pizza-form' onSubmit={onSubmit}>
             <label>Name: <input type='text' id='name-input' name='name' onChange={onChange} value={formData.name}/></label>
-            {formErrors.name && /*<ErrorMessage>{formErrors.name}</ErrorMessage>*/ <p>{formErrors.name}</p>}
+            {formErrors.name && <ErrorMessage>{formErrors.name}</ErrorMessage>}
             <br/>
             <label>Pizza Size:
                 <select id='size-dropdown' name='size' onChange={onChange} value={formData.size}>
@@ -64,17 +64,17 @@ function PizzaForm(props){
                     <option>Small</option>
                 </select>
             </label>
-            {formErrors.size && /*<ErrorMessage>{formErrors.size}</ErrorMessage>*/ <p>{formErrors.size}</p>}
+            {formErrors.size && <ErrorMessage>{formErrors.size}</ErrorMessage>}
             <br/>
             <div id='toppings-checklist'>
                 <h3>Toppings:</h3>
-                <label>Topping 1:<input type='checkbox' name='toppingOne' onChange={onChange} value={formData.toppingOne}/></label>
+                <label>Extra Cheese:<input type='checkbox' name='toppingOne' onChange={onChange} value={formData.toppingOne}/></label>
                 <br/>
-                <label>Topping 2:<input type='checkbox' name='toppingTwo' onChange={onChange} value={formData.toppingTwo}/></label>
+                <label>Pepperoni:<input type='checkbox' name='toppingTwo' onChange={onChange} value={formData.toppingTwo}/></label>
                 <br/>
-                <label>Topping 3:<input type='checkbox' name='toppingThree' onChange={onChange} value={formData.toppingThree}/></label>
+                <label>Pineapple:<input type='checkbox' name='toppingThree' onChange={onChange} value={formData.toppingThree}/></label>
                 <br/>
-                <label>Topping 4:<input type='checkbox' name='toppingFour' onChange={onChange} value={formData.toppingFour}/></label>
+                <label>Ham:<input type='checkbox' name='toppingFour' onChange={onChange} value={formData.toppingFour}/></label>
             </div>
             <br/>
                 <label>Special Instructions:<br/><input type='text' id='special-text' name='special' onChange={onChange} value={formData.special}/></label>
