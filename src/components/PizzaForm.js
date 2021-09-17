@@ -68,13 +68,13 @@ function PizzaForm(props){
             <br/>
             <div id='toppings-checklist'>
                 <h3>Toppings:</h3>
-                <label>Extra Cheese:<input type='checkbox' name='toppingOne' onChange={onChange} value={formData.toppingOne}/></label>
+                <label>Extra Cheese:<input type='checkbox' name='toppingOne' onChange={onChange} checked={formData.toppingOne}/></label>
                 <br/>
-                <label>Pepperoni:<input type='checkbox' name='toppingTwo' onChange={onChange} value={formData.toppingTwo}/></label>
+                <label>Pepperoni:<input type='checkbox' name='toppingTwo' onChange={onChange} checked={formData.toppingTwo}/></label>
                 <br/>
-                <label>Pineapple:<input type='checkbox' name='toppingThree' onChange={onChange} value={formData.toppingThree}/></label>
+                <label>Pineapple:<input type='checkbox' name='toppingThree' onChange={onChange} checked={formData.toppingThree}/></label>
                 <br/>
-                <label>Ham:<input type='checkbox' name='toppingFour' onChange={onChange} value={formData.toppingFour}/></label>
+                <label>Ham:<input type='checkbox' name='toppingFour' onChange={onChange} checked={formData.toppingFour}/></label>
             </div>
             <br/>
                 <label>Special Instructions:<br/><input type='text' id='special-text' name='special' onChange={onChange} value={formData.special}/></label>
